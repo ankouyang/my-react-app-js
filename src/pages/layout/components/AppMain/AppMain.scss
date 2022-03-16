@@ -1,0 +1,12 @@
+.app-main{
+    position: absolute;
+    right: 0;
+    left: 200px;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 10;
+    background: #eff0f4;
+    transition: left .28s;
+    box-sizing: border;
+}
