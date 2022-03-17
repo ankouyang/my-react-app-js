@@ -1,5 +1,8 @@
  import React, { Component } from 'react';
- 
+ import styles from './ShopList.module.scss'
+ import classNames from 'classnames/bind'
+
+const cls = classNames.bind(styles)
 const product = {
     id:1,
     name:' Sony 65寸高清液晶电视',
@@ -19,16 +22,17 @@ let count = 0
     //  方法函数需要定义在class这个类当中
     manageCount(){
         return  count + '个'
-    }
+    } 
 
      render() {
         const {dataList} = this.props
          return (
-            <div style={{width:'100%',paddingLeft:'30px'}}>
+            <div className={cls('shop-list')}>
             <div className='row mb-3'>
                 <div className='col-6 themed-grid-col'>{dataList.name}</div>
                 <div className='col-1 themed-grid-col'>￥{dataList.price}</div>
                 <div className={`col-2 themed-grid-col${count?'':'-s'}`}>{this.manageCount()}</div>
+                <span className={`col-1 themed-grid-col ${cls('shop-list__text','shop-list__span')}`}>MMP</span>
             </div>
             </div>
          )
