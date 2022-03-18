@@ -59,7 +59,7 @@ class AppMain extends Component {
                  <>
                  {
                     dataList.map(item=>{
-                        return   <ShopList dataList={item} key={item.id} />
+                        return   <ShopList dataList={item} key={item.id} onDelete={this.handleDelete} />
                   })
                  }
                  </>
@@ -68,6 +68,11 @@ class AppMain extends Component {
         )
          
      }
+    //处理子组件传递过来的参数,并给进行相应的处理,通过在标签上自定义方法。子组件通过props 拿到父组件自定义的方法
+    handleDelete(id){
+       console.log(id)
+    }
+
     render() { 
         return (
             <div className='app-main'> 

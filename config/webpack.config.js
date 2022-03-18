@@ -523,6 +523,16 @@ module.exports = function (webpackEnv) {
                   },
                 },
                 'sass-loader'
+              ).concat(
+                {
+                  loader: 'sass-resources-loader',
+                  options: {
+                      resources: [
+                          // resolve方法第二个参数为scss配置文件地址，如果有多个，就进行依次添加即可.这里先全局注入全局变量样式,无需每个页面都去引入。
+                          path.resolve(__dirname, '../src/assets/styles/variables.scss')
+                      ]
+                  }
+              }
               ),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
