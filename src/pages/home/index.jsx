@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react';
 import ShopList from '@/components/ShopList';
 import PageContainer from '@/components/PageContainer';
 import NavBar from '@/components/NavBar';
-import  ButtonHover from '@/components/Hoc/buttonHover'
+import  ButtonHover from '@/components/HocComponent/buttonHover'
+import  RenderProps from '@/components/RenderPropsComponent/renderProps'
 class Home extends PureComponent {
     constructor(props){
         super(props)
@@ -121,11 +122,11 @@ class Home extends PureComponent {
      }
      renderList(){
         return  (
-           <PageContainer
-            slot={
+           <PageContainer>
                 <>
                 <NavBar  onHandleAoumt={this.handleAoumt}  onHandleReset={this.handleReset}/>
                 <ButtonHover  id={2} />
+                <RenderProps />
                 {
                     this.state.dataList.map(item=>{
                        return   <ShopList data={item} key={item.id} onHandleIncrease={this.handleIncrease} onHandleDecrease={this.handleDecrease} onDelete={this.handleDelete} />
@@ -133,8 +134,7 @@ class Home extends PureComponent {
                 }
 
                 </>
-             } 
-            />  
+           </PageContainer>  
        )
         
     }
