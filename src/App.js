@@ -1,10 +1,11 @@
-import  LayOut from './pages/layout/index'
+import { routes } from '@router/index.js';
+import renderRoutes from '@router/renderRoutes'
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
-       <LayOut />
+      {renderRoutes(routes)}
     </div>
   );
 }

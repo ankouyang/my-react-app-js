@@ -8,6 +8,7 @@ import { BrowserRouter} from 'react-router-dom'
 
 // serviceWorker   worker进程 运行于浏览器后台的另外一个进程
 import 'bootstrap/dist/css/bootstrap.css'
+import 'antd/dist/antd.css';
 
 // ReactDOM.render(
 //   <React.StrictMode>
