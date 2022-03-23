@@ -11,7 +11,7 @@ class LayOut extends Component {
             <div className='layout'>
                 <AppHead />
                 <div className='layout__container'>
-                <SideMenu />
+                <SideMenu  {...this.props} />
                 <AppMain/>
                 </div>
             </div>

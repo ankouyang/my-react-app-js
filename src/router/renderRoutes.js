@@ -47,7 +47,7 @@ routes.forEach( (route, i)  => {
     <Suspense fallback={<div></div>}>
      <Switch {...switchProps}>
       {routers}
-      <Redirect to='not-found'></Redirect>  
+      <Redirect to='/not-found'></Redirect>  
     </Switch>
     </Suspense>
     

@@ -10,17 +10,18 @@ const View500 = lazy(() => import(/* webpackChunkName: "View500" */ "@pages/erro
 const constantRoutes = [
       {
         path: "/login",
+        key:'login',
         component: Login,
         permission: [1,2,3]
       },
       {
         path: "/404",
+        key:'404',
         component: View404,
         permission: [2,3]
       },
       {
           path:"/500",
-          exact: true,
           component: View500,
           permission: [1,2,3]
       },
@@ -34,9 +35,10 @@ const constantRoutes = [
 
 // 异步路由
 const asyncRoutes = [
-    {
-        path: "/",
-        exact: true,
+
+    {   
+        path: "/admin",
+        key:'admin',
         component: Layout,
         permission: [1,2,3]
     }
